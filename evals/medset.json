@@ -1,0 +1,52 @@
+{
+  "docset_id": "medset",
+  "cases": [
+    {
+      "question": "What is the first-line drug for high blood pressure?",
+      "answerable": true,
+      "note": "direct keyword match"
+    },
+    {
+      "question": "How often should HbA1c be measured?",
+      "answerable": true,
+      "note": "direct keyword match"
+    },
+    {
+      "question": "What inhaler do patients use for sudden wheezing?",
+      "answerable": true,
+      "note": "paraphrase: wheezing -> bronchospasm"
+    },
+    {
+      "question": "Which medication do I take if my blood pressure runs high?",
+      "answerable": true,
+      "note": "paraphrase, no shared keywords with retrieval terms"
+    },
+    {
+      "question": "How is sugar control tracked over time?",
+      "answerable": true,
+      "note": "paraphrase: sugar control -> glycemic control"
+    },
+    {
+      "question": "How often are patients rechecked?",
+      "answerable": true,
+      "note": "answer lives in the demo txt from the README"
+    },
+    {
+      "question": "What is the capital city of Portugal?",
+      "answerable": false
+    },
+    {
+      "question": "Explain the history of the Roman empire.",
+      "answerable": false
+    },
+    {
+      "question": "Tell me about stellar nucleosynthesis in red dwarfs.",
+      "answerable": false
+    },
+    {
+      "question": "xyzzy plugh frobnicate",
+      "answerable": false,
+      "note": "nonsense query"
+    }
+  ]
+}

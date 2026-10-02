@@ -1,0 +1,29 @@
+fastapi==0.142.2
+uvicorn[standard]==0.54.0
+pydantic==2.13.4
+pydantic-settings==2.15.0
+python-dotenv==1.2.3
+
+chromadb==1.5.9
+
+# numpy must stay on 1.x: torch 2.2.2 is built against numpy 1 and raises
+# "Numpy is not available" on encode() under numpy 2
+numpy==1.26.4
+
+# embeddings: pin transformers<5 (v5 refuses to load torch<2.5 and disables the backend)
+# extra index pulls CPU-only torch on linux; macOS falls back to PyPI (no cpu wheels there)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.2.2
+sentence-transformers==3.3.1
+transformers==4.51.3
+
+pypdf==6.19.0
+python-multipart==0.0.32
+
+# optional: only needed when LLM_MODEL is set
+litellm==1.98.0
+
+# ui: streamlit needs protobuf>=6, which chromadb's grpc path also requires.
+# keep streamlit>=1.60 or pip will try to downgrade protobuf and break chromadb.
+streamlit==1.64.0
+requests==2.32.3
